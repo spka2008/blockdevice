@@ -20,7 +20,7 @@ func main () {
     sort.Strings(outlist)
     for _, devices := range outlist{
         a=getattr(devices,"MOUNTPOINT")
-        if strings.Contains(a,"boot") || strings.Contains(a,"SWAP") || strings.Contains(a,"var") { continue }
+        if strings.Contains(a,"boot") || strings.Contains(a,"SWAP") || strings.Contains(a,"var") || strings.Contains(a,"efi") { continue }
         s = "<span color='grey'>"+strings.TrimSpace(getattr(devices,"SIZE"))+"</span>"
         if a == "" {
             col = "gray"
