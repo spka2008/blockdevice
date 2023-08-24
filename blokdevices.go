@@ -23,7 +23,7 @@ func main () {
         if strings.Contains(a,"boot") || strings.Contains(a,"SWAP") || strings.Contains(a,"var") || strings.Contains(a,"efi") { continue }
         s = "<span color='grey'>"+strings.TrimSpace(getattr(devices,"SIZE"))+"</span>"
         if a == "" {
-            col = "gray"
+            col = "grey"
             a = getattr(devices, "LABEL")
             if a == "" {
                 a = "NO LABEL"
